@@ -1,0 +1,16 @@
+.file-head{
+    text-align: center;
+    font-size: 25px;
+    letter-spacing: 1px;
+    margin: 20px 0px 20px 0px;
+    border-bottom: 1px solid black;
+}
+
+.back-icon-fileinfo{
+    position: absolute;
+    left: 0;
+    color:  #2962ff;;
+    margin-top: 70px;
+    margin-left: 10px;
+    z-index: 10;
+}

@@ -1,0 +1,35 @@
+.form{
+    margin: auto;
+    margin-top: 50%;
+}
+
+.back-icon{
+    position: absolute;
+    left: 0;
+    color:  #2962ff;;
+    margin-top: 50px;
+    margin-left: 10px;
+}
+
+.input{
+    letter-spacing: 1px;
+}
+
+.save{
+    margin-top: 20px;
+    border : 1px solid #2962ff;
+    background-color: white;
+    border-radius: 4%;
+    line-height: 35px;
+    letter-spacing: 2px;
+    color:#6C89FC;
+}
+
+.save:hover{
+    background-color: #2962ff;
+}
+
+.hospital_label, .name_label{
+    color:  #2962ff;
+    font-size: 20px;
+}
