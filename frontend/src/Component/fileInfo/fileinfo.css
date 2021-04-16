@@ -14,3 +14,38 @@
     margin-left: 10px;
     z-index: 10;
 }
+
+.add-file-to-folder{
+    position: absolute;
+    right: 0;
+    color:  #2962ff;;
+    margin-top: 70px;
+    margin-right: 10px;
+    z-index: 10;
+}
+
+.back-icon-fileinfo-empty{
+    position: absolute;
+    left: 0;
+    color:  #2962ff;;
+    margin-top: 70px;
+    margin-left: 10px;
+    z-index: 10;
+}
+
+.add-file-to-folder-empty{
+    position: absolute;
+    color:  #2962ff;;
+    margin-top: 40vh;
+    z-index: 10;
+    margin-left: 30vw;
+}
+
+.add-file-desc{
+    letter-spacing: 1px;
+    position: absolute;
+    margin-top: 65vh;
+    z-index: 10;
+    margin-left: 30vw;
+    font-size: 20px;
+}

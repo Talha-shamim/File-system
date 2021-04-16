@@ -1,8 +1,15 @@
-.lp-head{
+.lp-head {
     text-align: center;
     letter-spacing: 1px;
     margin-bottom: 20px;
     margin-top: 20px;
+}
+
+.add-folders{
+    text-align: center;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    margin-top: 60px;
 }
 
 .add-icon{
@@ -11,4 +18,11 @@
     z-index: 10;
     right: 0;
     margin-right: 20px;
+}
+
+.add-icon-empty{
+    color: #2962ff;
+    z-index: 10;
+    margin-top: 30%;
+    margin-left: 25vw;
 }

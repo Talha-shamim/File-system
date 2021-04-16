@@ -1,0 +1,17 @@
+.desc-file{
+    letter-spacing: 1px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.form-file-to-folder{
+    margin-top: 30%;
+}
+
+.back-icon-file-to-folder{
+    position: relative;
+    margin-top: 10px;    
+    color:  #2962ff;
+    margin-left: 10px;
+    z-index: 10;
+}

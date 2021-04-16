@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Route , Switch , Redirect} from 'react-router-dom';
 import FileInfo from './Component/fileInfo/fileinfo';
+import NewFile from './Component/file_to_folder/file_to_folder';
 import LandingPage from './Component/LandingPage/landindPage';
 import Form from './Component/newFiles/newfile';
 
@@ -13,6 +14,7 @@ class App extends Component {
                     <Route path="/landingpage" component={LandingPage}/>
                     <Route path="/newFile" component={Form}/>
                     <Route path="/fileInfo/:h/:d" component={FileInfo}/>
+                    <Route path="/newFileInFolder/:d/:h" component={NewFile}/>
                 </Switch>
             </React.Fragment>
          );

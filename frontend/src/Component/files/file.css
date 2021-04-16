@@ -8,3 +8,7 @@
     text-align: center;
     letter-spacing: 2px;
 }
+
+.delete-btn{
+    color: red;
+}
