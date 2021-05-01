@@ -3,6 +3,7 @@
     letter-spacing: 1px;
     margin-bottom: 20px;
     margin-top: 20px;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .add-folders{
@@ -12,12 +13,23 @@
     margin-top: 60px;
 }
 
+.search-bar{
+    display: flex;
+}
+
+.search-btn{
+    z-index: 10;
+    border: 1px solid black;
+}
+
 .add-icon{
     color: #2962ff;
-    position: absolute;
+    position: fixed;
     z-index: 10;
     right: 0;
+    bottom: 0;
     margin-right: 20px;
+    margin-bottom: 20px;
 }
 
 .add-icon-empty{
@@ -25,4 +37,8 @@
     z-index: 10;
     margin-top: 30%;
     margin-left: 25vw;
+}
+
+.wrapper-lp{
+    background-image: url('./bck.jfif');
 }

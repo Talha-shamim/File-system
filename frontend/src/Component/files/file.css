@@ -1,12 +1,15 @@
 .file-icon{
-    color: #6C89FC;
-    margin-top: 10px;
+    color: hsl(228, 96%, 71%);
+    margin-left: 33%;
+    margin-top: 30px;
+    z-index: 10;
 }
 
 .file-desc{
     margin-top: 5px;
     text-align: center;
     letter-spacing: 2px;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .delete-btn{
