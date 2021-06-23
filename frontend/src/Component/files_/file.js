@@ -5,6 +5,7 @@ import "./file.css";
 import folder from './folder.png'
 import delete_ from './delete.png'
 
+
 const File = (props) => {
   const handleDelete = (doc, hos) => {
     alert("Folder will be deleted");
@@ -22,10 +23,10 @@ const File = (props) => {
   return (
     <div className="col">
       <NavLink
-        to={`/fileInfo/${props.info.hos_name}/${props.info.doc_name}/${props.info._id}`}
+        to={`/fileInfo_/${props.info.hos_name}/${props.info.doc_name}/${props.info._id}`}
         className="file-wrap"
       >
-        <img src={folder} className="img-folder"/>
+      <img src={folder} className="img-folder" />
       </NavLink>
       <div
         className="delete-btn"
@@ -34,8 +35,8 @@ const File = (props) => {
         <img src={delete_}  className="delete_" />
       </div>
       <div className="file-desc">
-        <p>{props.info.doc_name}
-        <br />({props.info.hos_name})</p><hr></hr>
+        {props.info.doc_name}
+        <br />({props.info.hos_name})<hr></hr>
       </div>
     </div>
   );

@@ -1,12 +1,10 @@
-.file-by-doc{
-    text-align : center;
-}
-
 .image-file{
-    width: 90vw;
-    height: 64vh;
+    width: 100vw;
+    height: 80vh;
 }
 
-.file-btns{
-    text-align: center;
+.delete_if__{
+    z-index : 1;
+    width: 40px;
+    height: 40px;
 }

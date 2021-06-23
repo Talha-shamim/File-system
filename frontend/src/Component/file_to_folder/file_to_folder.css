@@ -1,17 +1,40 @@
-.desc-file{
-    letter-spacing: 1px;
-    text-align: center;
-    margin-top: 50px;
+.form-file-to-folder{
+   width : 300px;
+   padding : 20px 0px;
+   margin : auto;
+   margin-top : 50vh;
+   box-shadow: 0px 0px 20px rgba(55, 59, 149, 0.411458);
+   text-align: center;
 }
 
-.form-file-to-folder{
-    margin-top: 30%;
+.form_input{
+    padding-left : 50px;
 }
+
+.folder_add{
+    background: rgba(42, 147, 192, 1);
+    padding :5px;
+    letter-spacing: 1px;
+    margin-top : 10px;
+    color : white;
+    width : 200px;
+}
+
+.folder_add:hover{
+    color :rgba(42, 147, 192, 1);
+    background-color: white;
+}
+
 
 .back-icon-file-to-folder{
-    position: relative;
-    margin-top: 10px;    
-    color:  #2962ff;
-    margin-left: 10px;
-    z-index: 10;
+    margin: 30px 0px 0px 30px;
+}
+
+
+.svg_ftf{
+    width: 100%;
+    position: absolute;
+    opacity: 0.7;
+    top : -120px;
+    z-index : -1;
 }

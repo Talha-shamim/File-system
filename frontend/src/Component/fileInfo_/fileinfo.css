@@ -1,0 +1,19 @@
+.file_{
+    position: absolute;
+    margin-top: 240px;
+}
+
+.add-file-desc__{
+    margin: auto;
+    width: fit-content;
+    margin-top: 100px;
+    font-size: 20px;
+}
+
+.file_fi_{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    height: 60px;
+    width: 60px;
+}
