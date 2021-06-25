@@ -1,10 +1,12 @@
 .image-file{
     width: 100vw;
-    height: 80vh;
+    height: 100vh;
 }
 
 .delete_if__{
     z-index : 1;
     width: 40px;
     height: 40px;
+    margin-top: -100px;
+    border-radius: 15%;
 }

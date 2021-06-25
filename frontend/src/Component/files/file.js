@@ -33,7 +33,7 @@ const File = (props) => {
       >
         <img src={delete_}  className="delete_" />
       </div>
-      <div className="file-desc">
+      <div className="file-desc__">
         <p>{props.info.doc_name}
         <br />({props.info.hos_name})</p><hr></hr>
       </div>

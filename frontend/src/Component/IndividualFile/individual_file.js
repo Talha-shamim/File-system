@@ -40,7 +40,6 @@ const IndividualFile = (props) => {
           <div className="file-btns">
            <img onClick={handleDelete} className="delete_if__" src={delete_}></img>
           </div>
-          <hr></hr>
     </React.Fragment>
   );
 };

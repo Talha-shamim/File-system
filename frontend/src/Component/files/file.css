@@ -5,7 +5,7 @@
 
 .img-folder{
     width: 50%;
-    height: 60%;
+    height: 50%;
     margin-left: 22vw;
     margin-top : 50px;
     border-radius : 15%;
@@ -20,11 +20,8 @@
     box-shadow: 0px 0px 20px rgb(55, 59, 149, 0.411458);
 }
 
-.file-desc{
+.file-desc__{
     font-size: 25px;
-    font-weight: 600;
-    margin-top: 5px;
     text-align: center;
-    letter-spacing: 2px;
-    color  : blueviolet;
+    color : #009fff;
 }
