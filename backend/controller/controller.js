@@ -14,10 +14,8 @@ export const getFilesRoot = async (req, res) => {
 export const getFiles = async (req, res) => {
   const id = req.params;
   const parent_folder = req.params.pid;
-  console.log(parent_folder)
   try {
     const files = await File.findById("60cf889a5a23f946cc76fa71");
-    console.log(files)
     res.status(200).json(files.folders.filter(folder => folder.parentFolder === parent_folder));
   } catch (error) {
     res.status(400).json({ message: "Cant get files" });
@@ -25,9 +23,11 @@ export const getFiles = async (req, res) => {
 };
 
 export const removeFile = async (req, res) => {
-  const id = req.params;
+  const id = req.params.id;
+  const fid = req.params.fid;
   const doc_name = req.body.doc_name;
   const hos_name = req.body.hos_name;
+  
   try {
     await File.findOneAndUpdate(
       { _id: "60cf889a5a23f946cc76fa71" },
@@ -40,19 +40,52 @@ export const removeFile = async (req, res) => {
         },
       }
     );
-    res.status(200).json({ message: "removed file successfully" });
+    console.log('l1 pics deleted')
+
+    let user = await File.find({_id : "60cf889a5a23f946cc76fa71"});
+    let allFolder = user[0].folders;
+    let parent = await allFolder.filter((item) => item._id == fid)
+    let children = await allFolder.filter(item => item.parentFolder == fid);
+     
+    if(children.length > 0){
+      for(let i=0;i<children.length;i++){
+         await File.findOneAndUpdate(
+          { _id: "60cf889a5a23f946cc76fa71" },
+          {
+            $pull: {
+              content: {
+                doc_name: children[i].doc_name,
+                hos_name: children[i].hos_name,
+              },
+            },
+          }
+        );
+        console.log('l1 pics deleted') 
+      }
+    }
+        
+    await File.findOneAndUpdate({_id : "60cf889a5a23f946cc76fa71"},{
+      $pull : {
+        folders : {
+          parentFolder : parent[0]._id,
+        }
+      }
+    });
+    console.log('l1 folders deleted')
+
 
     await File.findOneAndUpdate(
       { _id: "60cf889a5a23f946cc76fa71" },
       {
         $pull: {
           folders: {
-            doc_name: doc_name,
-            hos_name: hos_name,
+            _id : parent[0]._id,
           },
         },
       }
     );
+    console.log('root deleted')
+
     res.status(200).json({ message: "updated folders successfully" });
   } catch (error) {
     res.status(400).json({ message: "Cant update folders" });
@@ -121,8 +154,6 @@ export const delete_file = async (req, res) => {
   const image = req.body.image;
   const doc_name = req.body.doc_name;
   const hos_name = req.body.hos_name;
-  console.log(doc_name);
-  console.log(hos_name);
   try {
     await File.findOneAndUpdate(
       { _id: "60cf889a5a23f946cc76fa71" },

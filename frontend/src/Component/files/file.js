@@ -7,15 +7,16 @@ import delete_ from './delete.png'
 
 const File = (props) => {
   const handleDelete = (doc, hos) => {
-    alert("Folder will be deleted");
+    alert("Folder wills be deleted");
     const data = {
       doc_name: props.info.doc_name,
       hos_name: props.info.hos_name,
     };
     axios.post(
-      "http://localhost:7000/user_file/update_file/60cf889a5a23f946cc76fa71",
+      "http://localhost:7000/user_file/update_file/60cf889a5a23f946cc76fa71/" + props.info._id,
       data
     );
+    console.log(props.info)
     window.location.reload(false);
   };
 

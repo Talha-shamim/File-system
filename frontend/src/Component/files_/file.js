@@ -14,7 +14,7 @@ const File = (props) => {
       hos_name: props.info.hos_name,
     };
     axios.post(
-      "http://localhost:7000/user_file/update_file/60cf889a5a23f946cc76fa71",
+      "http://localhost:7000/user_file/update_file/60cf889a5a23f946cc76fa71/" + props.info._id,
       data
     );
     window.location.reload(false);

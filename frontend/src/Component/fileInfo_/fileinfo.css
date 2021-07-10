@@ -1,6 +1,7 @@
-.file_{
-    position: absolute;
-    margin-top: 240px;
+.empty_fi__{
+    margin: auto;  
+    text-align: center;
+    margin-top: 200px !important;
 }
 
 .add-file-desc__{
@@ -13,7 +14,7 @@
 .file_fi_{
     position: fixed;
     bottom: 20px;
-    right: 20px;
+    right: 0px;
     height: 60px;
     width: 60px;
 }
