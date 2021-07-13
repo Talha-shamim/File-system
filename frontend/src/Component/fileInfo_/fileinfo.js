@@ -27,7 +27,7 @@ class FileInfo extends Component {
 
     render() { 
         return ( 
-            <div>
+            <div className="fi__">
             {   
                 this.state.file.length === 0 ? <div className="empty_fi__">
                 <p className="add-file-desc__">Add your first file!</p>

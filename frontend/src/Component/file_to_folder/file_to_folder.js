@@ -26,6 +26,7 @@ class NewFile extends Component {
             body : data
         }).then((result) => {
             console.log("File added");
+            this.props.history.push()
         }).catch((error) => {
             console.log(error.message);
         })

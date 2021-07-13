@@ -9,27 +9,31 @@
     float : right;
     margin-left : 40px;
     outline: none;
+    font-weight: 600;
+    outline: none !important;
+    border: none;
+    border-bottom: 2px solid black;
+    color: black;
+    background-color: #d7eeea;
 }
 
 .name_label, .hospital_label{
-    font-size: 18px;
+    font-size:18px;
     letter-spacing: 1px;
 }
 
 .save__folder{
-    background: rgba(42, 147, 192, 1);
+    background: rgb(109 211 201);
     padding :5px;
     letter-spacing: 1px;
     margin-top : 10px;
-    color : white;
-    width : 180px;
+    width : 200px;
     margin-left: 120px;
+    font-weight: 600;
+    border-radius: 10px;
+    border: lightblue;
 }
 
-.save__folder:hover{
-    color :rgba(42, 147, 192, 1);
-    background-color: white;
-}
 
 .back-icon{
     margin : 30px 0px 0px 30px;

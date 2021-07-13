@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 import "./form.css";
 import axios from "axios";
+import react from "react";
 
 class Form extends Component {
   constructor(props){
@@ -48,6 +49,7 @@ class Form extends Component {
       )
       .then((res) => {
         console.log(res);
+        this.props.history.push('/landingPage');
       })
       .catch((err) => {
         console.log(err);

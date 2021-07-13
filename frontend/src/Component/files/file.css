@@ -13,15 +13,30 @@
 }
 
 .delete_{
-    margin-top: -20px;
-    width : 40px;
-    height: 40px;;
+    position: absolute;
+    right: 20px;
+    top: -20px;
+    color: black;
+    box-shadow: 0px 0px 70px rgb(55, 59, 149, 0.411458);
     border-radius : 15%;
-    box-shadow: 0px 0px 20px rgb(55, 59, 149, 0.411458);
+}
+
+.info{
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    width : 30px;
+    height: 30px;;
+    border-radius : 15%;
 }
 
 .file-desc__{
-    font-size: 25px;
-    text-align: center;
-    color : #009fff;
+    font-size: 20px;
+    text-align: left;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.files{
+    display: flex;
 }

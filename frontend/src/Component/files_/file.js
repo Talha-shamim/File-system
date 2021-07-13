@@ -1,9 +1,9 @@
 import axios from "axios";
-import React, { Component } from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./file.css";
-import folder from './folder.png'
-import delete_ from './delete.png'
+import info__ from './info.png'
+
 
 
 const File = (props) => {
@@ -20,26 +20,39 @@ const File = (props) => {
     window.location.reload(false);
   };
 
+  const [info,setInfo] = useState(true);
+
+  const handleInfo = () => {
+    setInfo(!info)
+  }
+
   return (
-    <div className="col">
+    <React.Fragment>
+    <div className="col files__">
       <NavLink
         to={`/fileInfo_/${props.info.hos_name}/${props.info.doc_name}/${props.info._id}`}
         className="file-wrap"
       >
-      <img src={folder} className="img-folder" />
+      <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48" width="35px" height="48px"><linearGradient id="WQEfvoQAcpQgQgyjQQ4Hqa" x1="24" x2="24" y1="6.708" y2="14.977" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#eba600"/><stop offset="1" stop-color="#c28200"/></linearGradient><path fill="url(#WQEfvoQAcpQgQgyjQQ4Hqa)" d="M24.414,10.414l-2.536-2.536C21.316,7.316,20.553,7,19.757,7L5,7C3.895,7,3,7.895,3,9l0,30	c0,1.105,0.895,2,2,2l38,0c1.105,0,2-0.895,2-2V13c0-1.105-0.895-2-2-2l-17.172,0C25.298,11,24.789,10.789,24.414,10.414z"/><linearGradient id="WQEfvoQAcpQgQgyjQQ4Hqb" x1="24" x2="24" y1="10.854" y2="40.983" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffd869"/><stop offset="1" stop-color="#fec52b"/></linearGradient><path fill="url(#WQEfvoQAcpQgQgyjQQ4Hqb)" d="M21.586,14.414l3.268-3.268C24.947,11.053,25.074,11,25.207,11H43c1.105,0,2,0.895,2,2v26	c0,1.105-0.895,2-2,2H5c-1.105,0-2-0.895-2-2V15.5C3,15.224,3.224,15,3.5,15h16.672C20.702,15,21.211,14.789,21.586,14.414z"/></svg>
       </NavLink>
-      <div
-        className="delete-btn"
-        onClick={() => handleDelete(props.info.doc_name, props.info.hos_name)}
-      >
-        <img src={delete_}  className="delete_" />
+      {!info===true ?
+        <div
+          className="delete-btn"
+          onClick={() => handleDelete(props.info.doc_name, props.info.hos_name)}
+        >
+           <p className="delete_">delete</p>
+  
+        </div>  : ''}
+        <img src={info__} alt="ing" className="info" onClick={handleInfo} />
+        <div className="file-desc__">
+          <p>{props.info.doc_name}({props.info.hos_name})</p>
+        </div>
+        <hr></hr>
       </div>
-      <div className="file-desc">
-        {props.info.doc_name}
-        <br />({props.info.hos_name})<hr></hr>
-      </div>
-    </div>
-  );
-};
-
-export default File;
+      <hr></hr>
+    </React.Fragment>
+    );
+  };
+  
+  export default File;
+  

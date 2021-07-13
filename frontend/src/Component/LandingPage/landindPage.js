@@ -40,7 +40,7 @@ class LandingPage extends Component {
           </div>
         ) : (
           <div className="lp_wrapper__">
-          <p className="add-folders">Your DNM Vault</p>
+          <p className="add-folders">Your DNM Vault</p><hr></hr>
             <div className="container wrapper-lp">
               <div className="row row-cols-1">
                 <NavLink to="/newFile/root">
